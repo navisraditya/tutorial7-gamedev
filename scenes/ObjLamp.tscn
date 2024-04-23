@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="lamp" type="CSGCombiner" parent="."]
+use_collision = true
+
+[node name="CSGCylinder" type="CSGCylinder" parent="lamp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.450603, 0 )
+cone = true
+
+[node name="CSGCylinder2" type="CSGCylinder" parent="lamp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.276942, 0 )
+radius = 0.5
+height = 2.353
+
+[node name="CSGPolygon" type="CSGPolygon" parent="lamp"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030772, 0.515684, 0.01 )
+polygon = PoolVector2Array( 0, 0, -0.0156281, 1.0383, 0.784426, 1.38704, 1.58448, 0.0125865 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 8
+material = SubResource( 1 )
