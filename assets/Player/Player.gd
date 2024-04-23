@@ -31,7 +31,7 @@ func _process(delta):
 
 func _physics_process(delta):
 	var head_basis = head.get_global_transform().basis
-	
+
 	var movement_vector = Vector3()
 	if Input.is_action_pressed("movement_forward"):
 		movement_vector -= head_basis.z
